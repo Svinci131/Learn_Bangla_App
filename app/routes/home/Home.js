@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AppRegistry, View, Text, Image, TouchableHighlight, StyleSheet } from 'react-native';
+import { AppRegistry, ScrollView, View, Text, Image, TouchableHighlight, StyleSheet } from 'react-native';
 import vocab from '../../../resources/vocab'
 import { stylesObj } from './styles';
 import NavBar from '../../components/NavBar'
@@ -17,23 +17,26 @@ export default class HomeScene extends Component {
   }
   topics () {
     return topics.map(topic => 
-    (<TouchableHighlight onPress={() => this._navigate(topic)}>
-      <Text style={styles.menuTopic}> { topic } </Text>
-    </TouchableHighlight>)
+    (<View style= {styles.menuTopic}>
+      <TouchableHighlight onPress={() => this._navigate(topic)}>
+        <Text style={styles.menuTopic_text}> { topic } </Text>
+      </TouchableHighlight>
+    </View>)
     )
   }
   render() {
-    console.log(NavBar)
+    var _scrollView: ScrollView;
     return (
       <View style={ styles.mainContainer }>
         <NavBar />
-        <View style={ styles.homeMenu }>
+        <ScrollView 
+         ref={(scrollView) => { _scrollView = scrollView; }}
+         automaticallyAdjustContentInsets={false}
+         onScroll={() => { console.log('onScroll!'); }}
+         scrollEventThrottle={200}
+         style={ styles.topicsList }>
 	       {this.topics()}
-      	</View>
-        	        <TouchableHighlight style={styles.menuTopic} onPress={() => this._navigate()}>
-	          <Text>Tap me to load the next scene</Text>
-	        </TouchableHighlight>
-
+      	</ScrollView>
       </View>
     );
   }

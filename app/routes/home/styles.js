@@ -12,24 +12,17 @@ const stylesObj = {
     alignItems: 'center',
     backgroundColor: lightest,
   },
-  navBar: {
-    backgroundColor: dark,
-    width: 500,
-    paddingTop: 20,
-    paddingBottom: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
+  menuTopic: {
+    borderWidth: 1,
+    borderColor: dark,
+    width: 370,
+    alignItems: 'center'
   },
-  navBar_text_title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: lightest
-
-  },
-  navBar_text_span: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: lighter
+  menuTopic_text: {
+    fontSize: 14,
+    color: dark,
+    paddingTop: 10,
+    paddingBottom: 10
   },
   welcome: {
     fontSize: 20,
