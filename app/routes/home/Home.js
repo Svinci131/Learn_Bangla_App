@@ -1,19 +1,11 @@
 import React, { Component } from 'react';
 import { AppRegistry, ScrollView, View, Text, Image, TouchableHighlight, StyleSheet } from 'react-native';
-import vocab from '../../../resources/vocab'
 import { stylesObj } from './styles';
 import NavBar from '../../components/NavBar'
-
+import { getTopics } from '../../data'
 const styles = StyleSheet.create(stylesObj)
 
-const topics = Object.keys(vocab).reduce(
-  ( arr, currentItem) => {
-    let firstKey = (Object.keys(vocab[currentItem])[0])
-    let topic    = { title: currentItem,
-                    mainImg: vocab[currentItem][firstKey].img['04'] 
-                  }
-    return arr.concat([topic]) 
-  }, []);
+const topics = getTopics()
 
 export default class HomeScene extends Component {
 
@@ -24,14 +16,13 @@ export default class HomeScene extends Component {
 	  })
   }
   topics () {
-    console.log(topics)
     return topics.map(topic => 
     (<View style= {styles.menuTopic}>
       <Image 
           style={styles.menuTopic_image}
           source={{ uri: topic.mainImg }}
       / >
-      <View>
+      <View style={styles.menuTopic_textwrapper}>
       <TouchableHighlight onPress={() => this._navigate(topic.title)}>
         <Text style={styles.menuTopic_text}> { topic.title } </Text>
       </TouchableHighlight>

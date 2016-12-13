@@ -12,7 +12,7 @@ const stylesObj = {
     backgroundColor: dark,
     width: 500,
     paddingTop: 20,
-    paddingBottom: 10,
+    paddingBottom: 5,
     marginBottom: 35,
     justifyContent: 'center',
     alignItems: 'center',
