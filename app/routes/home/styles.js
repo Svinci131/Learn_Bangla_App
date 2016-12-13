@@ -15,24 +15,24 @@ const stylesObj = {
   menuTopic: {
     borderWidth: 1,
     borderColor: dark,
-    width: 370,
+    width: 375,
+    flex: 1,
+    flexDirection: 'row',
+    marginBottom: 10
+  },
+  menuTopic_image: {
+    width: 180,
+    height: 80
+  },
+  menuTopic_textwrapper: {
     alignItems: 'center'
   },
   menuTopic_text: {
     fontSize: 14,
     color: dark,
     paddingTop: 10,
-    paddingBottom: 10
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+    paddingBottom: 10,
+    textAlign: 'center'
   }
 }
 
