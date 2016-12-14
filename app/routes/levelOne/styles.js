@@ -6,6 +6,10 @@ import { lightest,
           accentOne,
           accentTwo } from '../../../styles/colors'
 
+import { levelOne } from '../../../styles/dimensions'
+const  { width } = levelOne
+
+
 const stylesObj = {
   container: {
     justifyContent: 'center',
@@ -15,7 +19,7 @@ const stylesObj = {
     fontSize: 20,
     color: darker,
     textAlign: 'left',
-    width: 300
+    width: width
   },
   mainContainer: {
     backgroundColor: 'steelblue',
@@ -23,19 +27,25 @@ const stylesObj = {
     justifyContent: 'center',
     height: 5000,
   },
-  homeMenu: {
-    backgroundColor: 'steelblue',
-    width: 50
+  levelContainer: {
+    borderWidth: 1,
+    borderColor: dark,
+    width: width,
+    justifyContent: 'center',
+    alignItems: 'center'
   },
-  menuTopic: {
-    color: 'white', 
-    margin: 10,
-    textAlign: 'center',
+  button: {
+    backgroundColor: accentOne,
+    padding: 12,
+    borderColor: accentOne,
+    borderWidth: 2,
+    borderRadius: 5,
+    marginTop: 20,
+    marginBottom: 20
   },
-  menuTopicView: {
-    width: 50,
-    borderColor: 'steelblue',
-    backgroundColor: 'steelblue'
+  buttonText: {
+    color: lightest,
+    fontSize: 18
   }
 };
 

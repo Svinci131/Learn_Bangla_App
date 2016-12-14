@@ -4,26 +4,19 @@ import { getWords } from '../../data'
 import vocab from '../../../resources/vocab'
 import { LevelOneComp } from './component/levelOne'
 
+
 export default class LevelOneScene extends Component {
   componentWillMount () {
     const { topic } = this.props
     const words = getWords(topic)
-    let randomIndex = getRandomListIndex(words)
-    console.log('didmount', words.length, randomIndex, words[randomIndex])
-    this.setState({
-      currentCard: words[randomIndex],
-      index: randomIndex,
-      words: words
-    })
+    let data = getUpdatedData(words)
+    console.log('didmount', data.words.length, data.index, data.words[data.index])
+    this.setState(data)
   }
   _updateCurrentWord () {
-    console.log('update')
-    let randomIndex = getRandomListIndex(this.state.words)
-    console.log('update', this.state.words)
-    this.setState({
-      currentCard: this.state.words[randomIndex],
-      index: randomIndex
-    }, () => {
+    let data = getUpdatedData(this.state.words)
+    console.log('update', this.state.words.length)
+    this.setState(data, () => {
       console.log('done', this.state.currentCard)
     })
   }
@@ -35,6 +28,17 @@ export default class LevelOneScene extends Component {
         currentCard = { this.state.currentCard }
         onPress = {this._updateCurrentWord.bind(this) }  />
     );
+  }
+}
+
+function getUpdatedData (words, shouldRemove) {
+  let randomIndex = getRandomListIndex(words)
+  let word = words[randomIndex]
+  if (shouldRemove) words.splice(randomIndex, 1)
+  return {
+    currentCard: word,
+    index: randomIndex,
+    words: words
   }
 }
 
