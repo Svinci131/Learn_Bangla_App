@@ -16,8 +16,8 @@ export default class HomeScene extends Component {
 	  })
   }
   topics () {
-    return topics.map(topic => 
-    (<View style= {styles.menuTopic}>
+    return topics.map((topic, i) => 
+    (<View key={i} style= {styles.menuTopic}>
       <Image 
           style={styles.menuTopic_image}
           source={{ uri: topic.mainImg }}

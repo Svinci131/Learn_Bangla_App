@@ -11,11 +11,11 @@ const  { width } = levelOne
 
 const stylesObj = {
   input: {
-    borderColor:  'gray',
+    borderColor:  lighter,
     borderWidth: 2,
     borderRadius: 5,
     height: 40,
-    width: width
+    width: width/1.5
   }
 }
 

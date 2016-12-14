@@ -10,8 +10,12 @@ import { lightest,
 const stylesObj = {
   text: {
     color: lighter,
-    marginBottom: 20,
-    textAlign: 'center'
+    marginBottom: 5,
+    textAlign: 'center',
+    fontSize: 16,
+    fontWeight: 'bold'
+  },
+  bLetters: {
   }
 }
 

@@ -8,7 +8,10 @@ const TextBlock = ({currentCard}) => {
    return (
 	   	<View >
 		  <Text style={styles.text}>English: {currentCard.english}</Text>
-		  <Text style={styles.text}>Bangla: {currentCard.bangla}</Text>
+		  <Text style={styles.text}>
+		  	Bangla: {currentCard.bangla}
+		  	<Text style={styles.bLetters}> {currentCard.bLetters}</Text>
+		  </Text>
 		</View>
 	)
 }

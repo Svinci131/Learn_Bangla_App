@@ -13,7 +13,7 @@ const stylesObj = {
     width: 500,
     paddingTop: 20,
     paddingBottom: 5,
-    marginBottom: 35,
+    marginBottom: 20,
     justifyContent: 'center',
     alignItems: 'center',
   },

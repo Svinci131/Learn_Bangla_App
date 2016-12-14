@@ -1,5 +1,3 @@
-import LevelOneScene from './LevelOne'
+import LevelOneScene from './container/levelOne'
 
-export default {
-  component : LevelOneScene
-}
+export default LevelOneScene

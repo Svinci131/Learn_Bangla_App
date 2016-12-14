@@ -6,7 +6,10 @@ const styles = StyleSheet.create(stylesObj)
 const InputField = ({ onChange }) => {
 	return (
 		<View style={ styles.InputField } >
-			<TextInput style={styles.input} onChangeText={(e) => onChange(e)} />
+			<TextInput 
+				style={ styles.input }
+				placeholder='answer'
+				onChangeText={(e) => onChange(e)} />
     	</View>
     )
 }

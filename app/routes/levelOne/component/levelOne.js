@@ -9,11 +9,14 @@ import SendButton from '../../../components/Button'
 
 const styles = StyleSheet.create(stylesObj)
 
-export const LevelOneComp = ({ topic, currentCard, onPress, onChange }) => {
+export const LevelOneComp = ({ topic, currentCard, onPress, onChange, count }) => {
     return (
       <View style={styles.container}>
         <NavBar />
-        <Text style={styles.title}>Level One: { topic }</Text>
+        <Text style={styles.title}>
+            Level One: { topic }
+            <Text>Total: {count}</Text>
+        </Text>
         <View style={styles.levelContainer}>
         	<LargeImage currentCard={currentCard} />
         	<TextBlock currentCard={currentCard} />
