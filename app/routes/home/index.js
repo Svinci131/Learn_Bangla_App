@@ -1,5 +1,3 @@
-import HomeScene from './Home'
+import HomeScene from './HomeContainer'
 
-export default {
-  component : HomeScene
-}
+export default HomeScene

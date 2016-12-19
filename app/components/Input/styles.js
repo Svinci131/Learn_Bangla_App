@@ -15,7 +15,9 @@ const stylesObj = {
     borderWidth: 2,
     borderRadius: 5,
     height: 40,
-    width: width/1.5
+    width: width/1.5,
+    color: lighter,
+    paddingLeft: 15
   }
 }
 

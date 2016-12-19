@@ -2,7 +2,10 @@
 
 ##Get started
 
-reload the app with Command-R to see the changes
-if you want more options, use Command-Control-Z 
+### Launch
+react-native run-ios
 
+###Debug
 command d - debug js remotely
+Reload the app with Command-R to see the changes. If you want more options, use Command-Control-Z 
+

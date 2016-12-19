@@ -3,12 +3,14 @@ import { TextInput, View, Text, StyleSheet } from 'react-native';
 import { stylesObj } from './styles';
 const styles = StyleSheet.create(stylesObj)
 
-const InputField = ({ onChange }) => {
+const InputField = ({ onChange, guess }) => {
+	console.log(guess)
 	return (
 		<View style={ styles.InputField } >
 			<TextInput 
 				style={ styles.input }
-				placeholder='answer'
+				value={ guess }
+				editable = {true}
 				onChangeText={(e) => onChange(e)} />
     	</View>
     )

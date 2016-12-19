@@ -24,13 +24,16 @@ export default class LevelOneScene extends Component {
     else this._updateCurrentWord(false)
   }
   render() {
+    console.log(this.state.answer)
     return (
       <LevelOneComp 
-        count = { this.state.words.length }
-        topic = { this.props.topic }
+        count       = { this.state.words.length }
+        topic       = { this.props.topic }
         currentCard = { this.state.currentCard }
-        onPress = {this._checkAnswer.bind(this) }
-        onChange = {this._updateAnswer.bind(this) } />
+        onPress     = { this._checkAnswer.bind(this) }
+        onChange    = { this._updateAnswer.bind(this) } 
+        guess       = { this.state.answer }
+      />
     )
   }
 }
@@ -45,7 +48,7 @@ function getUpdatedData (words, currentIndex, shouldRemove) {
     currentCard: word,
     index: randomIndex,
     words: words,
-    answer: ''
+    answer: 'hi'
   }
 }
 

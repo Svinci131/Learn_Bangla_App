@@ -5,7 +5,7 @@ import {
   View,
   Navigator
 } from 'react-native';
-import HomeScene from './app/routes/home/Home.js'
+import HomeScene from './app/routes/home'
 import LevelOne from './app/routes/levelOne'
 
 export default class Learn_Bangla extends Component {

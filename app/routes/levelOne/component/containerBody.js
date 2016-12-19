@@ -9,7 +9,8 @@ import SendButton from '../../../components/Button'
 
 const styles = StyleSheet.create(stylesObj)
 
-const ContainerBody = ({ topic, currentCard, onPress, onChange, count }) => {
+const ContainerBody = ({ topic, currentCard, onPress, onChange, count, guess }) => {
+    console.log('test', guess)
     return (
         <View>
             <Text style={styles.title}>
@@ -19,7 +20,7 @@ const ContainerBody = ({ topic, currentCard, onPress, onChange, count }) => {
             <View style={styles.levelContainer}>
                 <LargeImage currentCard={currentCard} />
                 <TextBlock currentCard={currentCard} />
-                <InputField onChange={onChange}/>
+                <InputField onChange={onChange} guessr={guess}/>
                 <SendButton onPress={onPress}/>
             </View>
         </View>

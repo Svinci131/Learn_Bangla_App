@@ -8,7 +8,6 @@ const styles = StyleSheet.create(stylesObj)
 const topics = getTopics()
 
 export default class HomeScene extends Component {
-
   _navigate(topic) {
 	  this.props.navigator.push({
 	    name: 'LevelOne',

@@ -26,7 +26,7 @@ const stylesObj = {
     backgroundColor: 'steelblue',
     alignSelf: 'stretch',
     justifyContent: 'center',
-    height: 20,
+    height: 20
   },
   levelContainer: {
     borderWidth: 1,
