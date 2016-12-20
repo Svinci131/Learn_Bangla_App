@@ -25,7 +25,7 @@ const LevelThreeBody = ({ topic, currentCard, onPress, onChange, count, guess })
                 <Text style = {styles.text} >
                     { english }
                 </Text>
-                <InputField onChange={onChange} />
+                <InputField guess={guess} onChange={onChange} />
                 <SendButton onPress={() => onPress('bangla')}/>
             </View>
         </View>

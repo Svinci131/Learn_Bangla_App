@@ -9,6 +9,8 @@ import { stylesObj } from '../styles';
 
 const styles = StyleSheet.create(stylesObj)
 
+import { convertFromHex } from '../../../utils';
+
 const LevelTwoBody = ({ topic, currentCard, onPress, onChange, count, guess }) => {
     const { bangla, bLetters } = currentCard
     return (
@@ -24,10 +26,10 @@ const LevelTwoBody = ({ topic, currentCard, onPress, onChange, count, guess }) =
                 <Text style = {styles.text} >
                     Bangla: {bangla}
                     <Text style = {styles.bLetters} > 
-                        {bLetters}
+                        {convertFromHex(bLetters)}
                     </Text>
                 </Text>
-                <InputField onChange = {onChange} />
+                <InputField guess={guess} onChange = {onChange} />
                 <SendButton onPress  = {() => onPress('english')} />
             </View>
         </View>

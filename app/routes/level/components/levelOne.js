@@ -9,6 +9,7 @@ import SendButton from '../../../components/Button'
 
 const styles = StyleSheet.create(stylesObj)
 
+
 const LevelOneBody = ({ topic, currentCard, onPress, onChange, count, navigate, guess }) => {
     return (
         <View>

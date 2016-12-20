@@ -10,7 +10,9 @@ const InputField = ({ onChange, guess }) => {
 				style={ styles.input }
 				value={ guess }
 				editable = {true}
-				onChangeText={(e) => onChange(e)} />
+				onChangeText={(e) => onChange(e)}
+				clearTextOnFocus={true}
+			/>
     	</View>
     )
 }

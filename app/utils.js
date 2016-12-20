@@ -26,3 +26,21 @@ export function checkAnswer(correctProp) {
   if (guess === correct) this.updateCurrentWord(true)
   else this.updateCurrentWord(false)
 }
+
+const Entities = require('html-entities').AllHtmlEntities;
+
+export const convertFromHex = (bLetters)=> {
+    var hexEntities = bLetters; 
+    hexEntities = hexEntities.split(";");
+    hexEntities = hexEntities.slice(0, hexEntities.length-1)
+    entities = new Entities();
+    var arr = hexEntities.reduce(function(arr, curr){
+        var Char = entities.decode(""+curr+";")
+        arr.push( Char);
+        return arr;
+    }, []);
+
+    var letters = arr.join(" ")
+    console.log(letters, 'letters')
+    return (letters)
+}
