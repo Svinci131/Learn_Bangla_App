@@ -7,24 +7,35 @@ const styles = StyleSheet.create(stylesObj)
 
 const topics = getTopics()
 
+
+const Topic = ({topic, onPress}) => {
+	return (
+	    <View style= {styles.menuTopic}>
+	      <Image 
+	          style={styles.menuTopic_image}
+	          source={{ uri: topic.mainImg }}
+	      />
+	      <View style={styles.menuTopic_textwrapper}>
+	        <TouchableHighlight onPress={() => onPress(topic.title)}>
+	          <Text style={styles.menuTopic_text}> { topic.title } </Text>
+	        </TouchableHighlight>
+	      </View>
+	     </View>
+    )
+}
+
 const Topics = ({ onPress }) => {
   return (
     <View>
       { 
         topics.map((topic, i) => {
           return (
-            <View key={i} style= {styles.menuTopic}>
-              <Image 
-                  style={styles.menuTopic_image}
-                  source={{ uri: topic.mainImg }}
-              />
-              <View style={styles.menuTopic_textwrapper}>
-                <TouchableHighlight onPress={() => onPress(topic.title)}>
-                  <Text style={styles.menuTopic_text}> { topic.title } </Text>
-                </TouchableHighlight>
-              </View>
-             </View>
-          )
+          	<Topic 
+	          	topic={topic} 
+	          	key={i} 
+	          	onPress={onPress} 
+	          />
+	         )
         })
       }
     </View>

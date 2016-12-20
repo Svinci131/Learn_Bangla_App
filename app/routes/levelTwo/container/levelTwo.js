@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { getWords } from '../../../data'
-import { LevelOneComp } from '../component/levelOne'
+import { LevelTwoComp } from '../component/levelTwo'
 import {  
   getRandomListIndex,
   getUpdatedData,
   checkAnswer
 } from '../../../utils'
 
-export default class LevelOneScene extends Component {
+export default class LevelTwoScene extends Component {
   componentWillMount () {
     const { topic } = this.props
     const words = getWords(topic)
@@ -22,9 +22,8 @@ export default class LevelOneScene extends Component {
     this.setState({answer: e})
   }
   render() {
-    console.log(this.state.answer)
     return (
-      <LevelOneComp 
+      <LevelTwoComp 
         count       = { this.state.words.length }
         topic       = { this.props.topic }
         currentCard = { this.state.currentCard }
@@ -35,4 +34,3 @@ export default class LevelOneScene extends Component {
     )
   }
 }
-

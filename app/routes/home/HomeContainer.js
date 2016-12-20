@@ -15,35 +15,22 @@ export default class HomeScene extends Component {
       passProps: { topic }
 	  })
   }
-  topics () {
-    return topics.map((topic, i) => 
-    (<View key={i} style= {styles.menuTopic}>
-      <Image 
-          style={styles.menuTopic_image}
-          source={{ uri: topic.mainImg }}
-      / >
-      <View style={styles.menuTopic_textwrapper}>
-      <TouchableHighlight onPress={() => this._navigate(topic.title)}>
-        <Text style={styles.menuTopic_text}> { topic.title } </Text>
-      </TouchableHighlight>
-      </View>
-    </View>)
-    )
-  }
   render() {
     var _scrollView: ScrollView;
     return (
       <View style={ styles.mainContainer }>
         <NavBar />
+        
         <ScrollView 
          ref={(scrollView) => { _scrollView = scrollView; }}
          automaticallyAdjustContentInsets={false}
          onScroll={() => { console.log('onScroll!'); }}
          scrollEventThrottle={200}
          style={ styles.topicsList }>
-         <Topics onPress={this._navigate.bind(this)}/>
-	       {/*this.topics()*/}
-      	</ScrollView>
+
+          <Topics onPress={this._navigate.bind(this)}/>
+      	
+        </ScrollView>
       </View>
     );
   }

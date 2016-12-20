@@ -24,3 +24,4 @@ export const getWords = (topic) => (
       return wordObj
   })
 )
+

@@ -10,21 +10,22 @@ import SendButton from '../../../components/Button'
 const styles = StyleSheet.create(stylesObj)
 
 const ContainerBody = ({ topic, currentCard, onPress, onChange, count, guess }) => {
-    console.log('test', guess)
     return (
         <View>
             <Text style={styles.title}>
-            Level One: { topic }
+            Level Two: { topic }
             <Text>Total: {count}</Text>
             <Text style={styles.subtitle}>
-                Enter the Bangla Translation
+                Enter the English Translation
             </Text>
             </Text>
             <View style={styles.levelContainer}>
-                <LargeImage currentCard={currentCard} />
-                <TextBlock currentCard={currentCard} />
+                <Text style={styles.text}>
+                    Bangla: {currentCard.bangla}
+                    <Text style={styles.bLetters}> {currentCard.bLetters}</Text>
+                </Text>
                 <InputField onChange={onChange} guessr={guess}/>
-                <SendButton onPress={() => onPress('bangla')}/>
+                <SendButton onPress={() => onPress('english')}/>
             </View>
         </View>
     )
