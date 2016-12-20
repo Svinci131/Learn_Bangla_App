@@ -14,7 +14,7 @@ export function getUpdatedData (words, currentIndex, shouldRemove) {
     currentCard: word,
     index: randomIndex,
     words: words,
-    answer: 'hi'
+    answer: null
   }
 }
 

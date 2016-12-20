@@ -15,7 +15,10 @@ const stylesObj = {
     borderWidth: 2,
     borderRadius: 5,
     marginTop: 20,
-    marginBottom: 20
+    marginBottom: 20,
+    width: 100,
+    height: 50,
+    alignItems: 'center'
   },
   buttonText: {
     color: lightest,

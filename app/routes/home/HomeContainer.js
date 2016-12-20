@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
-import { AppRegistry, ScrollView, View, Text, Image, TouchableHighlight, StyleSheet } from 'react-native';
-import { stylesObj } from './styles';
+import { ScrollView, View, StyleSheet } from 'react-native';
 import NavBar from '../../components/NavBar'
-import { getTopics } from '../../data'
 import Topics from './topics'
+import { stylesObj } from './styles';
 const styles = StyleSheet.create(stylesObj)
 
+import { getTopics } from '../../data'
 const topics = getTopics()
 
 export default class HomeScene extends Component {
   _navigate(topic) {
+    let level = 1;
 	  this.props.navigator.push({
-	    name: 'LevelOne',
-      passProps: { topic }
+	    name: 'Level',
+      passProps: { 
+        topic,
+        level
+      }
 	  })
   }
   render() {

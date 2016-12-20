@@ -5,8 +5,8 @@ const styles = StyleSheet.create(stylesObj)
 
 const SendButton = ({ onPress, value, text }) => {
 	return (
-		<View style={styles.button}>
-			<TouchableOpacity onPress={() => onPress(value)}>
+		<View>
+			<TouchableOpacity style={styles.button} onPress={() => onPress(value)}>
 	          <Text style={styles.buttonText}>
 	            { text || 'Submit'}
 	          </Text>

@@ -3,10 +3,10 @@ import { Image, StyleSheet } from 'react-native';
 import { stylesObj } from './styles';
 const styles = StyleSheet.create(stylesObj)
 
-const LargeImage = ({ currentCard }) => {
+const LargeImage = ({ img }) => {
 	return (
 		<Image 
-    		source={{ uri: currentCard.img['05'] }}
+    		source={{ uri: img['05'] }}
     		style={styles.mainImageBox}
     	/>
     )

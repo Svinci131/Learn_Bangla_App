@@ -4,7 +4,6 @@ import { stylesObj } from './styles';
 const styles = StyleSheet.create(stylesObj)
 
 const InputField = ({ onChange, guess }) => {
-	console.log(guess)
 	return (
 		<View style={ styles.InputField } >
 			<TextInput 

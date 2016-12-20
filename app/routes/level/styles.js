@@ -34,6 +34,12 @@ const stylesObj = {
     width: width,
     justifyContent: 'center',
     alignItems: 'center'
+  },
+  row: {
+    width: width,
+    flex: 2,
+    flexDirection: 'row',
+    justifyContent: 'space-between'
   }
 };
 

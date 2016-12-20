@@ -6,8 +6,8 @@ import {
   Navigator
 } from 'react-native';
 import HomeScene from './app/routes/home'
-import LevelOne from './app/routes/levelOne'
-import LevelTwo from './app/routes/levelTwo'
+import Level from './app/routes/level'
+import Congrats from './app/routes/congrats'
 
 export default class Learn_Bangla extends Component {
   renderScene(route, navigator) { 
@@ -15,11 +15,11 @@ export default class Learn_Bangla extends Component {
     if (route.name === 'Main') { 
       return <HomeScene navigator={navigator} />
     }
-    else if (route.name === 'LevelOne') {
-      return <LevelOne navigator={navigator} {...route.passProps} />
+    else if (route.name === 'Level') {
+      return <Level navigator={navigator} {...route.passProps} />
     }
-    else if (route.name === 'LevelTwo') {
-      return <LevelTwo navigator={navigator} {...route.passProps} />
+    else if (route.name === 'Congrats') {
+      return <Congrats navigator={navigator} {...route.passProps} />
     }
   }
   render() {

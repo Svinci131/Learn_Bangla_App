@@ -9,26 +9,30 @@ import SendButton from '../../../components/Button'
 
 const styles = StyleSheet.create(stylesObj)
 
-const ContainerBody = ({ topic, currentCard, onPress, onChange, count, guess }) => {
+const LevelOneBody = ({ topic, currentCard, onPress, onChange, count, navigate, guess }) => {
     return (
         <View>
             <Text style={styles.title}>
-            Level Two: { topic }
+            Level One: { topic }
             <Text>Total: {count}</Text>
             <Text style={styles.subtitle}>
-                Enter the English Translation
+                Enter the Bangla Translation
             </Text>
             </Text>
             <View style={styles.levelContainer}>
-                <Text style={styles.text}>
-                    Bangla: {currentCard.bangla}
-                    <Text style={styles.bLetters}> {currentCard.bLetters}</Text>
-                </Text>
-                <InputField onChange={onChange} guessr={guess}/>
-                <SendButton onPress={() => onPress('english')}/>
+                <LargeImage { ...currentCard } />
+                <TextBlock  { ...currentCard } />
+                <InputField onChange={onChange} guess={guess}/>
+                <View style={styles.row}>
+                    <SendButton text='Menu' onPress={() => navigate()}/>
+                    <SendButton onPress={() => onPress('bangla')}/>
+                </View>
             </View>
         </View>
     )
 }
 
-export default ContainerBody
+const Modal = ({shouldShow}) => {
+
+}
+export default LevelOneBody
