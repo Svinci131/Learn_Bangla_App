@@ -6,17 +6,9 @@ import TextBlock from '../../../components/textblock'
 import InputField from '../../../components/Input'
 import LargeImage from '../../../components/LargeImage'
 import SendButton from '../../../components/Button'
-import { toTitleCase } from '../../../utils'
-const styles = StyleSheet.create(stylesObj)
+import LevelHeader from './subComponents/LevelHeader'
 
-const LevelHeader = ({level, topic, count}) => (
-  <View style={styles.row}>
-    <Text style={styles.level_header_title}>{/*style={styles.title*/}
-      Level { level }: { toTitleCase(topic) }
-    </Text>
-    <Text style={styles.level_header_total}> Total: {count}</Text>
-  </View>
-)
+const styles = StyleSheet.create(stylesObj)
 
 const LevelOneBody = ({ topic, currentCard, onPress, onChange, count, navigate, guess }) => {
     return (
