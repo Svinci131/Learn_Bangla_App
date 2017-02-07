@@ -20,9 +20,11 @@ export function getUpdatedData (words, currentIndex, shouldRemove) {
 
 export function checkAnswer(correctProp) {
   const { answer, currentCard } = this.state
-  guess = answer.toLowerCase().trim()
-  correct = currentCard[correctProp].toLowerCase().trim()
+  if (answer) {
+    guess = answer.toLowerCase().trim()
+    correct = currentCard[correctProp].toLowerCase().trim()
 
-  if (guess === correct) this.updateCurrentWord(true)
-  else this.updateCurrentWord(false)
+    if (guess === correct) this.updateCurrentWord(true)
+    else this.updateCurrentWord(false)
+  }
 }

@@ -18,16 +18,11 @@ const LevelTwoBody = ({ topic, currentCard, onPress, onChange, count, guess }) =
             <Text style = {styles.title} >
             Level Two: { topic }
             <Text>Total: {count}</Text>
-            <Text style = {styles.subtitle} >
-                Enter the English Translation
-            </Text>
             </Text>
             <View style = {styles.levelContainer} >
-                <Text style = {styles.text} >
-                    Bangla: {bangla}
-                    <Text style = {styles.bLetters} > 
-                        {convertFromHex(bLetters)}
-                    </Text>
+                <Text style = {styles.textLarge}>Bangla: {bangla}</Text>
+                <Text style = {styles.textLarge} > 
+                    {convertFromHex(bLetters)}
                 </Text>
                 <InputField guess={guess} onChange = {onChange} />
                 <SendButton onPress  = {() => onPress('english')} />

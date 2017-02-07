@@ -17,7 +17,8 @@ const stylesObj = {
   },
   title: {
     fontSize: 20,
-    color: darker,
+    fontWeight: 'bold',
+    color: dark,
     textAlign: 'left',
     width: width,
     marginBottom: 20
@@ -35,11 +36,31 @@ const stylesObj = {
     justifyContent: 'center',
     alignItems: 'center'
   },
+  level_header_title: {
+    fontSize: 18,
+    color: dark,
+    fontWeight: 'bold'
+  },
+  level_header_total: {
+    fontSize: 18,
+    color: dark
+  },
   row: {
     width: width,
-    flex: 2,
+    flex: 1,
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    alignItems: 'stretch',
+    justifyContent: 'space-between',
+    // borderColor: 'red',
+    // borderWidth: 1,
+    maxHeight: 40
+  },
+  textLarge: {
+    color: lighter,
+    marginBottom: 5,
+    textAlign: 'center',
+    fontSize: 24,
+    fontWeight: 'bold'
   }
 };
 

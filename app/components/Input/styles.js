@@ -17,7 +17,8 @@ const stylesObj = {
     height: 40,
     width: width/1.5,
     color: lighter,
-    paddingLeft: 15
+    paddingLeft: 15,
+    marginBottom: 20
   }
 }
 

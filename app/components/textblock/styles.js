@@ -14,8 +14,6 @@ const stylesObj = {
     textAlign: 'center',
     fontSize: 16,
     fontWeight: 'bold'
-  },
-  bLetters: {
   }
 }
 

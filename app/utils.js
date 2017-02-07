@@ -1,34 +1,4 @@
-export const getRandomListIndex = (list) => {
-    let listLength  = (list.length)-1
-    let randomIndex = Math.floor(Math.random()*(listLength))
-    return randomIndex
-}
-
-export function getUpdatedData (words, currentIndex, shouldRemove) {
-  if (shouldRemove) {
-    words.splice(currentIndex, 1)
-  }
-  let randomIndex = getRandomListIndex(words)
-  let word = words[randomIndex]
-  return {
-    currentCard: word,
-    index: randomIndex,
-    words: words,
-    answer: 'hi'
-  }
-}
-
-export function checkAnswer(correctProp) {
-  const { answer, currentCard } = this.state
-  guess = answer.toLowerCase().trim()
-  correct = currentCard[correctProp].toLowerCase().trim()
-
-  if (guess === correct) this.updateCurrentWord(true)
-  else this.updateCurrentWord(false)
-}
-
 const Entities = require('html-entities').AllHtmlEntities;
-
 export const convertFromHex = (bLetters)=> {
     var hexEntities = bLetters; 
     hexEntities = hexEntities.split(";");
@@ -41,6 +11,13 @@ export const convertFromHex = (bLetters)=> {
     }, []);
 
     var letters = arr.join(" ")
-    console.log(letters, 'letters')
     return (letters)
+}
+
+export const getLast = (array) => {
+  return array[array.length-1]
+}
+
+export const toTitleCase = (string) => {
+  return string.charAt(0).toUpperCase() + string.substr(1).toLowerCase()
 }

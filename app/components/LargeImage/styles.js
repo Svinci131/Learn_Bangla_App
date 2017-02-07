@@ -10,10 +10,10 @@ const  { width } = levelOne
 
 const stylesObj = {
   mainImageBox: {
-    height:width-20,
-    width: width-20,
+    height:width-30,
+    width: width-30,
     marginTop: 10,
-    marginBottom: 20
+    marginBottom: 10
   }
 }
 
