@@ -9,3 +9,4 @@ react-native run-ios
 command d - debug js remotely
 Reload the app with Command-R to see the changes. If you want more options, use Command-Control-Z 
 
+##Entry Point

@@ -55,6 +55,17 @@ const stylesObj = {
     // borderWidth: 1,
     maxHeight: 40
   },
+  level_two_text_block: {
+    width: width-(width/5),
+    marginTop: 30
+  },
+  level_two_text: {
+    color: dark,
+    paddingBottom: 2,
+    textAlign: 'left',
+    fontSize: 18,
+    fontWeight: 'bold'
+  },
   textLarge: {
     color: lighter,
     marginBottom: 5,

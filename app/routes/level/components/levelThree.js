@@ -16,12 +16,12 @@ const LevelThreeBody = ({ topic, currentCard, onPress, onChange, count, guess })
         <View>
             <LevelHeader count={count} level='One' topic={topic} />
             <View style={styles.levelContainer}>
-                <Text style={styles.subtitle}>
-                    Enter the Bangla Translation
-                </Text>
                 <LargeImage { ...currentCard } />
                 <Text style = {styles.text} >
-                    { english }
+                    English: { english }
+                </Text>
+                <Text style = {styles.text} >
+                    Bangla:
                 </Text>
                 <InputField guess={guess} onChange={onChange} />
                 <SendButton onPress={() => onPress('bangla')}/>

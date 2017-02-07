@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import SendButton from '../../../../components/Button'
 import { stylesObj } from '../../styles'
-const styles = StyleSheet.create(stylesObj)
 import { toTitleCase } from '../../../../utils'
+
+const styles = StyleSheet.create(stylesObj)
 
 const LevelHeader = ({level, topic, count}) => (
   <View style={styles.row}>

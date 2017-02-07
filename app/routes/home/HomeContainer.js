@@ -10,7 +10,7 @@ const topics = getTopics()
 
 export default class HomeScene extends Component {
   _navigate(topic) {
-    let level = 1;
+    let level = 3;
 	  this.props.navigator.push({
 	    name: 'Level',
       passProps: { 
