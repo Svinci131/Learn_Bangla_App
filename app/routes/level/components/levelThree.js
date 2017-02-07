@@ -6,6 +6,7 @@ import TextBlock from '../../../components/textblock'
 import InputField from '../../../components/Input'
 import LargeImage from '../../../components/LargeImage'
 import SendButton from '../../../components/Button'
+import LevelHeader from './subComponents/LevelHeader'
 
 const styles = StyleSheet.create(stylesObj)
 
@@ -13,14 +14,11 @@ const LevelThreeBody = ({ topic, currentCard, onPress, onChange, count, guess })
     const { english } = currentCard
     return (
         <View>
-            <Text style={styles.title}>
-            Level Three: { topic }
-            <Text>Total: {count}</Text>
-            <Text style={styles.subtitle}>
-                Enter the Bangla Translation
-            </Text>
-            </Text>
+            <LevelHeader count={count} level='One' topic={topic} />
             <View style={styles.levelContainer}>
+                <Text style={styles.subtitle}>
+                    Enter the Bangla Translation
+                </Text>
                 <LargeImage { ...currentCard } />
                 <Text style = {styles.text} >
                     { english }
